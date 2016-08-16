@@ -1,0 +1,9 @@
+apply plugin: 'java'
+
+jar {
+	baseName = "PolygonBuffer"
+	version = '1.0'
+	manifest {
+		attributes 'Main-Class': 'com.polygonbuffer.AreaBuffer'
+	}
+}
