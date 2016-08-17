@@ -1,8 +1,9 @@
-# PolygonBuffer
-- create new directory in your project root 
-- place polygon buffer jar file from ______ to libs folder
- - Right click on libs/PolygonBuffer-1.0.jar and click "Add as library"
- - In "Add to module" select "app" and click ok
- - DONE 
- - Clean your project once if you cannot file classes
- - 
+# Polygon Buffer
+This library lets you create a buffer area with same shape as your original one, at a given distance on maps. Its purely java code so can be used without any dependencies. 
+### Instructions
+There are two ways in which you can use this library.
+- First : Just copy paste entire **areabuffer** package in your project and start using it.
+- Second : You can import given **jar file** in your application.
+
+### Version
+1.0
