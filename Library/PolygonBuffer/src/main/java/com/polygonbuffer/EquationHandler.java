@@ -144,7 +144,7 @@ public class EquationHandler {
         double ySecondPoint = (lineEquation.getM() * xSecondPoint) + lineEquation.getC();
         secondPoint.setY(ySecondPoint);
         Polygon polygonPoints = buildPolygon(polygon);
-        if (polygonPoints.contains(new com.polygonbuffersample.areabuffer.Point(firstPoint
+        if (polygonPoints.contains(new Point(firstPoint
                 .getX(), firstPoint.getY())))
             return secondPoint;
         else
@@ -156,7 +156,7 @@ public class EquationHandler {
         for (int i = 0; i < polygon.length - 1; i++) {
             Point point = polygon[i];
             builder.addVertex(
-                    new com.polygonbuffersample.areabuffer.Point(point.getX(), point.getY()));
+                    new Point(point.getX(), point.getY()));
         }
         return builder.build();
     }
