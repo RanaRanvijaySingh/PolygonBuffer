@@ -8,10 +8,11 @@ public class AreaBuffer {
      * Function to get the buffer points from a given set of lat lng
      *
      * @param pointList List<Points> A list of INCLOSED points
+     * @param distance double Distance you want to be from original shape. Approx : 0.0001 is 3-5 meter distance on ground
      * @return List<Point> list of buffered points
      * @throws Exception
      */
-    public static List<Point> buffer(List<Point> pointList) throws Exception {
+    public static List<Point> buffer(List<Point> pointList, double distance) throws Exception {
         EquationHandler equationHandler = new EquationHandler();
         List<LineEquation> bufferedLineEquationList = new ArrayList<>();
         /**
