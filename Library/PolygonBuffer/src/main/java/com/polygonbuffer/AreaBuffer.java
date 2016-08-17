@@ -42,7 +42,7 @@ public class AreaBuffer {
              */
             Point[] polygon = pointList.toArray(new Point[pointList.size() - 1]);
             Point bufferPoint = equationHandler.getPointOnLineAtDistance(perpendicularLine,
-                    centerPoint, 0.0001, polygon);
+                    centerPoint, distance, polygon);
             /**
              * Step 5: Get equation of line parallel to original line passing though buffer point
              */
