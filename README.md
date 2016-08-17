@@ -12,7 +12,7 @@ There are two ways in which you can use this library.
 - Second : You can import given **jar file** in your application.
 
 ### How to use it
-All you need to use is this line  **List<Point> bufferedPolygonList = AreaBuffer.buffer(pointList);**.
+All you need to use is this line  **List<Point> bufferedPolygonList = AreaBuffer.buffer(pointList, 0.0001);**.
 
     final List<LatLng> latLngPolygon = new ArrayList<>();
     {
@@ -33,8 +33,10 @@ All you need to use is this line  **List<Point> bufferedPolygonList = AreaBuffer
                     latLngPolygon.get(i).getLongitude());
             pointList.add(point);
         }
+    //Distance you want to be from original shape. Approx : 0.0001 is 3-5 meter distance on ground
+        double distance = 0.0001; 
     // Once that is done just call this function and you will get a list of buffered polygon points.
-    List<Point> bufferedPolygonList = new AreaBuffer().buffer(pointList);
+        List<Point> bufferedPolygonList = new AreaBuffer().buffer(pointList,distance);
     
 
 
