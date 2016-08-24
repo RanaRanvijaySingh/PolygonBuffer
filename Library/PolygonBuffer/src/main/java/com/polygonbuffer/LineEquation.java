@@ -1,4 +1,4 @@
-package com.polygonbuffersample.areabuffer;
+package com.precisionhawk.inflightmobile.flightplanning.polygonbuffer;
 
 /**
  * Class represents equation of a line in the form of "y = mx + c"
@@ -13,6 +13,11 @@ public class LineEquation {
      * "c" represents 'y' intercept of a line
      */
     private double c;
+    /**
+     * "a" represents factor of y in line equation ay = mx + c
+     * By default "a" will always be one.
+     */
+    private double a = 1;
     private String equation;
 
     public double getM() {
@@ -33,11 +38,19 @@ public class LineEquation {
         setEquation();
     }
 
+    public double getA() {
+        return a;
+    }
+
+    public void setA(double a) {
+        this.a = a;
+    }
+
     public String getEquation() {
-        return "y = " + m + "x + " + c;
+        return a + "y = " + m + "x + " + c;
     }
 
     private void setEquation() {
-        this.equation = "y = " + m + "x + " + c;
+        this.equation = a + "y = " + m + "x + " + c;
     }
 }

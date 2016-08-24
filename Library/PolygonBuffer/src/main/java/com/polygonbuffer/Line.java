@@ -1,4 +1,4 @@
-package com.polygonbuffersample.areabuffer;
+package com.precisionhawk.inflightmobile.flightplanning.polygonbuffer;
 
 /**
  * Line is defined by starting point and ending point on 2D dimension.<br>

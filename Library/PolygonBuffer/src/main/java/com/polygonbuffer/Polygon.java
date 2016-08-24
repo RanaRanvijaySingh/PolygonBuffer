@@ -1,4 +1,4 @@
-package com.polygonbuffersample.areabuffer;
+package com.precisionhawk.inflightmobile.flightplanning.polygonbuffer;
 
 import java.util.ArrayList;
 import java.util.List;

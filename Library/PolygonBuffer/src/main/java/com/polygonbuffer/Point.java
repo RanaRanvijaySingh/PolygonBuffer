@@ -1,4 +1,4 @@
-package com.polygonbuffersample.areabuffer;
+package com.precisionhawk.inflightmobile.flightplanning.polygonbuffer;
 
 public class Point {
     public double x;
