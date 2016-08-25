@@ -23,8 +23,6 @@ All you need to use is this line  **List<Point> bufferedPolygonList = AreaBuffer
         latLngPolygon.add(new LatLng(18.52091709192927, 73.77995252609253));
         latLngPolygon.add(new LatLng(18.520316874109714, 73.77870798110962));
         latLngPolygon.add(new LatLng(18.520454212271208, 73.77709329128265));
-        // Same as first point as polygon has to be enclosed.
-        latLngPolygon.add(new LatLng(18.5222294252479, 73.77664268016815)); 
     }
     // You may have to convert your List of lat and lng to list of Point object that this library supports.
       List<Point> pointList = new ArrayList<>();
