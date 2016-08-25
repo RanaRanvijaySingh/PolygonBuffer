@@ -189,14 +189,23 @@ public class EquationHandler {
         }
         double y;
         /**
-         * Now put 'x' in any one line equation ie. y = mx + c.
+         * Check for slope of a line to be 0.
+         * If found then you can directly set the y-axis value as y-intercept.
          */
         if (secondLine.getM() == 0) {
             y = secondLine.getC();
         } else if (firstLine.getM() == 0) {
             y = firstLine.getC();
         } else {
-            y = (firstLine.getM() * x) + firstLine.getC();
+            /**
+             * Now put 'x' in any one line equation ie. y = mx + c.
+             * Check if the line you choose should not be parallel to x-axis.
+             */
+            if (firstLine.getA() != 0) {
+                y = (firstLine.getM() * x) + firstLine.getC();
+            } else {
+                y = (secondLine.getM() * x) + secondLine.getC();
+            }
         }
         return new Point(x, y);
     }
@@ -216,9 +225,6 @@ public class EquationHandler {
          * Using line equation 'y=mx+c' and point (x,y) and distance 'd'
          * You will get two points on either side of the line.
          */
-//        DecimalFormat f = new DecimalFormat("###.######");
-//        String string = f.format(distance);
-//        double distanceFormated = Double.parseDouble(string);
         Point firstPoint = new Point();
         Point secondPoint = new Point();
         double xFirstPoint;
